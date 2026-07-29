@@ -1,6 +1,15 @@
-# bicon-gate
+# BiCon-Gate
 
-Core experimental code for [**BiCon-Gate: Consistency-Gated De-colloquialisation for Dialogue Fact-Checking**](https://aclanthology.org/2026.fever-1.5/), published at FEVER 2026.
+Core experimental code for **[BiCon-Gate: Consistency-Gated De-colloquialisation for Dialogue Fact-Checking](https://aclanthology.org/2026.fever-1.5/)**, published at FEVER 2026.
+
+Dialogue claim rewriting can improve evidence retrieval, but an incorrect rewrite can change the claim's meaning and hurt verification. **BiCon-Gate** selects a de-colloquialised rewrite only when it is semantically consistent with the dialogue; otherwise, it falls back to the original claim.
+
+<p align="center">
+  <img src="assets/bicon_gate_overview.png" alt="Overview of the BiCon-Gate pipeline" width="900">
+</p>
+<p align="center"><em>Staged de-colloquialisation, BiCon-Gate routing, and IR/FV/E2E evaluation.</em></p>
+
+On DialFact, scoped pronoun rewriting improves retrieval across sparse, dense, and cross-encoder stages. With BiCon-Gate, FV-only macro-F1 improves by **1.84 points** and top-1 end-to-end macro-F1 by **0.62 points** over the original claim.
 
 ## Repository
 
